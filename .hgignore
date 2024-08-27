@@ -1,0 +1,13 @@
+syntax: glob
+*~
+.git
+awstats/
+.DS_Store
+*.orig
+.tern-port
+*.mp4
+*~
+._*
+
+
+syntax: regexp
