@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:bullseye
 LABEL version="0.1"
 MAINTAINER veto<veto@myridia.com>
 RUN apt-get update && apt-get install -y \
@@ -24,10 +24,11 @@ RUN apt-get update && apt-get install -y \
   p7zip-full \
   postgresql-client \
   inetutils-ping  \
-  net-tools
+  net-tools \
+  mariadb-client
   
 RUN wget -q https://packages.sury.org/php/apt.gpg -O- | apt-key add -
-RUN echo "deb https://packages.sury.org/php/ bookworm main" | tee /etc/apt/sources.list.d/php.list
+RUN echo "deb https://packages.sury.org/php/ bullseye main" | tee /etc/apt/sources.list.d/php.list
 
 
 RUN apt-get update && apt-get install -y \
