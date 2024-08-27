@@ -1,2 +1,2 @@
 # apache2-php56
-Latest Debian and Apache with PHP56
+Bullseye Debian and Apache with PHP56
