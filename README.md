@@ -1,2 +1,2 @@
-# apache2-php74
-Latest Debian and Apache with PHP74
+# apache2-php56
+Latest Debian and Apache with PHP56
