@@ -41,7 +41,7 @@ jobs:
           file: ./Dockerfile
           push: true
           #tags: ${{ steps.meta.outputs.tags }}
-          tags: myridia/apache2-php74:latest
+          tags: myridia/apache2-php56:latest
           labels: ${{ steps.meta.outputs.labels }}
 
 
