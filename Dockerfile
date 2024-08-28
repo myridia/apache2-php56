@@ -25,7 +25,8 @@ RUN apt-get update && apt-get install -y \
   postgresql-client \
   inetutils-ping  \
   net-tools \
-  mariadb-client
+  mariadb-client \
+  sshpass 
   
 RUN wget -q https://packages.sury.org/php/apt.gpg -O- | apt-key add -
 RUN echo "deb https://packages.sury.org/php/ bullseye main" | tee /etc/apt/sources.list.d/php.list
