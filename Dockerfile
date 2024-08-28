@@ -47,6 +47,7 @@ RUN apt-get update && apt-get install -y \
   php5.6-sybase \ 
   php5.6-pgsql \
   php5.6-soap \
+  php5.6-redis \  
   libapache2-mod-php5.6 \
   php-pear \
   php5.6-mcrypt
