@@ -26,7 +26,8 @@ RUN apt-get update && apt-get install -y \
   inetutils-ping  \
   net-tools \
   mariadb-client \
-  sshpass 
+  sshpass \
+  redis 
   
 RUN wget -q https://packages.sury.org/php/apt.gpg -O- | apt-key add -
 RUN echo "deb https://packages.sury.org/php/ bullseye main" | tee /etc/apt/sources.list.d/php.list
