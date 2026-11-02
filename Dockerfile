@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:trixie
 LABEL version="0.1"
 MAINTAINER veto<veto@myridia.com>
 RUN apt-get update && apt-get install -y \
@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
   openssh-server \
   supervisor \
   default-mysql-client \
-  libpcre3-dev \
+  libpcre2-dev \
   gcc \
   make \
   emacs-nox \ 
@@ -30,8 +30,9 @@ RUN apt-get update && apt-get install -y \
   redis \
   iproute2 
   
-RUN wget -q https://packages.sury.org/php/apt.gpg -O- | apt-key add -
-RUN echo "deb https://packages.sury.org/php/ bullseye main" | tee /etc/apt/sources.list.d/php.list
+RUN install -d -m 0755 /etc/apt/keyrings && \
+  curl -fsSL https://packages.sury.org/php/apt.gpg -o /etc/apt/keyrings/sury-php.gpg
+RUN echo "deb [signed-by=/etc/apt/keyrings/sury-php.gpg] https://packages.sury.org/php/ trixie main" | tee /etc/apt/sources.list.d/php.list
 
 
 RUN apt-get update && apt-get install -y \
