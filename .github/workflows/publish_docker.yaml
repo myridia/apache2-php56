@@ -4,9 +4,6 @@ on:
     branches: ["main"]
     tags:
       - 'latest'
-#on:
-#  release:
-#    types: [published]
 
 jobs:
   push_to_registry:
